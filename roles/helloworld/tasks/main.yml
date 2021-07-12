@@ -1,0 +1,24 @@
+- name: Create a pod
+  k8s:
+    state: present
+    definition:
+      apiVersion: apps/v1 
+      kind: Deployment 
+      metadata:
+        name: "helloworld"
+        namespace: "{{ ansible_operator_meta.namespace }}"
+        labels:
+          app: galaxy
+      spec:
+        replicas: "{{ replicas }}"
+        selector:
+          matchLabels:
+            app: galaxy
+        template:
+          metadata:
+           labels:
+             app: galaxy
+          spec: 
+           containers:
+           - name: utilitypod
+             image: quay.io/bitnami/nginx 

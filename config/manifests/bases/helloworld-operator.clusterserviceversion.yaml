@@ -1,0 +1,42 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: ClusterServiceVersion
+metadata:
+  annotations:
+    alm-examples: '[]'
+    capabilities: Basic Install
+  name: helloworld-operator.v0.0.0
+  namespace: placeholder
+spec:
+  apiservicedefinitions: {}
+  customresourcedefinitions: {}
+  description: Hello Worls
+  displayName: Hello World
+  icon:
+  - base64data: ""
+    mediatype: ""
+  install:
+    spec:
+      deployments: null
+    strategy: ""
+  installModes:
+  - supported: false
+    type: OwnNamespace
+  - supported: false
+    type: SingleNamespace
+  - supported: false
+    type: MultiNamespace
+  - supported: true
+    type: AllNamespaces
+  keywords:
+  - hello
+  - world
+  links:
+  - name: Helloworld Operator
+    url: https://helloworld-operator.domain
+  maintainers:
+  - email: helloworld@example.com
+    name: helloworld
+  maturity: alpha
+  provider:
+    name: example.com
+  version: 0.0.0
