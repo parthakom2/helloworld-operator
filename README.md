@@ -94,7 +94,7 @@ This document provides quick steps to get started on a Hello World Ansible opera
 
 -  Add a sample operator logic to create an nginx deployment
 
-  Update `roles/helloworld/tasks/main.yml` with this ansible task which creates an nginx pod.
+   Update `roles/helloworld/tasks/main.yml` with this ansible task which creates an nginx pod.
 
     ```
     - name: Create a pod
